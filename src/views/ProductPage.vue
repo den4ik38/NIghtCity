@@ -8,11 +8,11 @@
         <div v-if="middleReiting" class="description__raiting">Owners raiting: {{middleReiting}}<label class="label_rating"></label></div>
         <div class="description__cost">{{product.price}} ฿</div>
         <div class="description__textbox">
-          <p v-for=" descrip in product.description" class="decription__text">
-            {{descrip}}
+          <p v-for=" descrip in product.description" :style="descrip.style" class="decription__text">
+            {{descrip.content}}
           </p>
-          <p v-for=" detail in product.details" class="decription__text">
-            {{detail}}
+          <p v-for=" detail in product.details" :style="detail.style" class="decription__text">
+            {{detail.content}}
           </p>
         </div>
         <div class="description__weightcontainer">

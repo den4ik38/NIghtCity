@@ -22,6 +22,10 @@ export default {
       default() {
         return []
       }
+    },
+    selectImg: {
+      type: Boolean,
+      required: false
     }
   },
   data() {
@@ -46,7 +50,14 @@ export default {
       return this.selectedImage
     }
   },
-  mounted() {
+  watch: {
+    selectImg(){
+      if(this.photos.length > 0){
+        this.selectedImage = this.photos[0]
+      }
+    }
+  },
+  mounted(){
     setTimeout(() => {
       this.selectedImage = this.photos[0]
     }, 500);

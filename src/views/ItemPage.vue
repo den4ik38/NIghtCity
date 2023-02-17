@@ -487,7 +487,7 @@ export default {
       margin: 0 5px;
     }
     .description {
-      padding: 10px 20px;
+      padding: 20px 5px;
     }
     .decription__text {
       font-size: 18px;

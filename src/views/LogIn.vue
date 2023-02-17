@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div>
     <div class="line"></div>
     <div class="wrapper">
       <auth-form class="auth__form"/>

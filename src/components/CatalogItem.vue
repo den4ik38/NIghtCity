@@ -1,5 +1,5 @@
 <template>
-  <div v-if="item.type === 'bud'" class="route__link" :class="{route__link_full:full}">
+<div v-if="item.type === 'bud'" class="route__link" :class="{route__link_full:full}">
   <div class="slider__item" :class="{slider__item_full:full}">
     <router-link :to="{ name: 'page',params: {name: item.name}}" :style="bgiMake()" class="slider__img">
       <div v-if="!item.inStock" class="slider__available">Not Available</div>
@@ -54,14 +54,14 @@
     <div class="descrip__container">
       <div class="slider__title" :class="{short__style:!full}"> 
         <span class="title">{{item.name}}</span>
-        <div v-if="!full" class="slider__details slider__details_short">{{item.details[0]}}</div>
+        <div v-if="!full" class="slider__details slider__details_short">{{item.details[0].content}}</div>
         <div :class="{price__and__thc:full}">
           <div class="slider__cost">{{item.price}}฿</div>
         </div>
       </div>
       <div v-if="full" class="slider__description">
-        <p class="taste__text">{{item.description[2]}}</p>
-        <div class="slider__details">{{item.details[0]}}</div>
+        <p class="taste__text">{{item.description[2].content}}</p>
+        <div class="slider__details">{{item.details[0].content}}</div>
       </div>
       <div class="weight_and_cart" :class="{price__and__thc:full}">
         <div class="cart_section" :class="{short__style:!full}">
